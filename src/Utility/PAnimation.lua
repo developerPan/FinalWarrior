@@ -33,7 +33,7 @@ function PAnimation:init()
 end
 --播放cocos动画
 function PAnimation:playd(animName,loop,callFunc,duration)
-    GLog:sysInfo("播放动画"..animName)
+    GLog:sysInfo("播放动画",animName)
     --loop=0不循环,loop>0循环播放
     loop = loop or 0
     self._movementCallback[animName]    =   callFunc

@@ -136,9 +136,9 @@ function MainController:initHero()
     hero:setHp(180)
     hero:setMaxHp(200)
     self.menuView:setSlider(hero:getHpPercent())
-    hero:fixPos(65,105)
-    hero:bindRect(Role.RECTKEY.ATTACK,200,145,0)
-    hero:bindRect(Role.RECTKEY.HIT,100,145,-10)
+--    hero:fixPos(30,0)
+--    hero:bindRect(Role.RECTKEY.ATTACK,200,145,0)
+--    hero:bindRect(Role.RECTKEY.HIT,100,145,-10)
     self.view.land:addChild(hero,100)
     return hero
  
@@ -151,7 +151,7 @@ function MainController:initMonsters()
     monster.mainController = self
     monster:startUpdate()
     monster:setPosition(self:getFixedPosition(400,0))
-    hero:fixPos(57,107)
+--    monster:fixPos(30,0)
     self.view.land:addChild(monster)
     --monster.bloodSlider:setPosition(cc.p(monster:getContentSize().width/2,monster:getContentSize().height/2))
 

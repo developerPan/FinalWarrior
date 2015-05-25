@@ -1,5 +1,5 @@
 local Role  =   class("Role",function() 
-    return cc.Node:create()
+    return cc.LayerColor:create(cc.c4b(255,9,9,255))
 end)
 
 local PAnimation    =   require("Utility/PAnimation")
@@ -28,7 +28,10 @@ function Role:ctor(animName,actList)
     self:initActionList(actList)
     self.attackCounts = 0
     self:runAction(Role.STATE.IDLE)
-    self:setScale(0.7)
+    self:setScale(0.7)  
+    
+    self.bodyWidth = 80 --身长   判断攻击距离时需要算上该宽度
+    self:setContentSize(100,100)
     return self
 end
 
@@ -173,7 +176,7 @@ end
 function Role:normalAttack() 
     local loop  = 0
     self.anim:setSpeed(3)
-    self:setPositionX(self:getPositionX()+15)
+    self:setPositionX(self:getPositionX() + 5)
     local func = function() self:runAction(Role.STATE.IDLE) end
     self.anim:playd(Role.STATE.ATTACK,loop,func,0)
 end

@@ -8,7 +8,7 @@ function Monster:ctor(...)
     self:updateFace("LEFT")
     self.bloodSlider    =   self:initBloodSlider() 
     self.blood = 100
-    self.attRectX = 60 --攻击距离
+    self.attRectX = 5 --攻击距离
     self.attRate = 0.6  --以秒为单位
     self.time = 0  
     self.lastAttTime = 0
@@ -25,8 +25,8 @@ end
 function Monster:initBloodSlider()
     local slider =  UIBar.create()
     slider:setAnchorPoint(0.5,0.5)
-    slider:setPositionX(50)
-    slider:setPositionY(140)
+    slider:setPositionX(0)
+    slider:setPositionY(150)
     self:addChild(slider)
     return slider
 end 
@@ -36,7 +36,7 @@ function Monster:updeteState(dt)
     self.time = dt + self.time
 	local heroPosX = self.mainController.hero:getPositionX()
     local distance = math.abs(heroPosX - self:getPositionX()) 
-    if(distance <= self.attRectX) then --达到攻击距离
+    if(distance <= self.attRectX + self.bodyWidth) then --达到攻击距离
         self:checkAttack()
     else    --没达到
         self:moveToPlayer(heroPosX)
