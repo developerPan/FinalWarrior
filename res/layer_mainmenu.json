@@ -1,0 +1,113 @@
+{
+  "version": "1.0.0.0",
+  "designWidth": 1136,
+  "designHeight": 640,
+  "dataScale": 1.0,
+  "textures": [],
+  "texturesPng": [
+    "jiaxue.png"
+  ],
+  "nodeTree": {
+    "options": {
+      "$type": "EditorCommon.JsonModel.Component.GUI.RootGUISurrogate, EditorCommon",
+      "visible": true,
+      "frameEvent": null,
+      "name": "Node",
+      "classname": "Node"
+    },
+    "children": [
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.ImageViewSurrogate, EditorCommon",
+          "fileNameData": {
+            "resourceType": 0,
+            "path": "jiaxue.png",
+            "plistFile": ""
+          },
+          "scale9Width": 32.0,
+          "scale9Height": 32.0,
+          "x": 906.0,
+          "y": 584.0,
+          "visible": true,
+          "classType": "ImageView",
+          "width": 32.0,
+          "height": 32.0,
+          "positionPercentX": 0.797535241,
+          "positionPercentY": 0.9125,
+          "sizePercentX": 0.07042254,
+          "sizePercentY": 0.125,
+          "actionTag": 1033018199,
+          "tag": 6,
+          "ignoreSize": true,
+          "name": "ImageView_1",
+          "classname": "ImageView"
+        },
+        "children": [],
+        "classname": "ImageView"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.ImageViewSurrogate, EditorCommon",
+          "fileNameData": {
+            "resourceType": 0,
+            "path": "jiaxue.png",
+            "plistFile": ""
+          },
+          "scale9Width": 32.0,
+          "scale9Height": 32.0,
+          "x": 852.0,
+          "y": 584.0,
+          "visible": true,
+          "classType": "ImageView",
+          "width": 32.0,
+          "height": 32.0,
+          "positionPercentX": 0.75,
+          "positionPercentY": 0.9125,
+          "sizePercentX": 0.07042254,
+          "sizePercentY": 0.125,
+          "actionTag": 857434109,
+          "tag": 7,
+          "ignoreSize": true,
+          "name": "ImageView_2",
+          "classname": "ImageView"
+        },
+        "children": [],
+        "classname": "ImageView"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.ImageViewSurrogate, EditorCommon",
+          "fileNameData": {
+            "resourceType": 0,
+            "path": "jiaxue.png",
+            "plistFile": ""
+          },
+          "scale9Width": 32.0,
+          "scale9Height": 32.0,
+          "x": 961.0,
+          "y": 584.0,
+          "visible": true,
+          "classType": "ImageView",
+          "width": 32.0,
+          "height": 32.0,
+          "positionPercentX": 0.8459507,
+          "positionPercentY": 0.9125,
+          "sizePercentX": 0.07042254,
+          "sizePercentY": 0.125,
+          "actionTag": 775756117,
+          "tag": 8,
+          "ignoreSize": true,
+          "name": "ImageView_3",
+          "classname": "ImageView"
+        },
+        "children": [],
+        "classname": "ImageView"
+      }
+    ],
+    "classname": "Node"
+  },
+  "action": {
+    "speed": 1.0,
+    "timelines": []
+  }
+}

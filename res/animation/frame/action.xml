@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <plists>
+        <plist>action.plist</plist>
+    </plists>
+    <animations>
+        <animation>
+            <name>gaoqiustand</name>
+            <delay>0.3</delay>
+            <flipX>false</flipX>
+            <flipY>false</flipY>
+            <spriteFrame>gaoqiu01.png</spriteFrame>
+            <spriteFrame>gaoqiu02.png</spriteFrame>
+            <spriteFrame>gaoqiu03.png</spriteFrame>
+            <spriteFrame>gaoqiu04.png</spriteFrame>
+        </animation>
+        <animation>
+            <name>gaoqiuattacking</name>
+            <delay>0.1</delay>
+            <flipX>false</flipX>
+            <flipY>false</flipY>
+            <spriteFrame>gaoqiu_00000.png</spriteFrame>
+            <spriteFrame>gaoqiu_00001.png</spriteFrame>
+            <spriteFrame>gaoqiu_00002.png</spriteFrame>
+            <spriteFrame>gaoqiu_00003.png</spriteFrame>
+            <spriteFrame>gaoqiu_00004.png</spriteFrame>
+            <spriteFrame>gaoqiu_00005.png</spriteFrame>
+            <spriteFrame>gaoqiu_00006.png</spriteFrame>
+            <spriteFrame>gaoqiu_00007.png</spriteFrame>
+            <spriteFrame>gaoqiu_00008.png</spriteFrame>
+            <spriteFrame>gaoqiu_00009.png</spriteFrame>
+        </animation>
+        <animation>
+            <name>gaoqiuattacked</name>
+            <delay>0.1</delay>
+            <flipX>false</flipX>
+            <flipY>false</flipY>
+            <spriteFrame>gaoqiu05.png</spriteFrame>
+            <spriteFrame>gaoqiu06.png</spriteFrame>
+            <spriteFrame>gaoqiu06.png</spriteFrame>
+            <spriteFrame>gaoqiu06.png</spriteFrame>
+            <spriteFrame>gaoqiu06.png</spriteFrame>
+        </animation>
+    </animations>
+</root>

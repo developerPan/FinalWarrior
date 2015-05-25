@@ -1,0 +1,303 @@
+{
+  "version": "1.0.0.0",
+  "designWidth": 1136,
+  "designHeight": 640,
+  "dataScale": 1.0,
+  "textures": [],
+  "texturesPng": [
+    "yun3.png",
+    "yun4.png",
+    "yun7.png",
+    "yun5.png",
+    "protrait_jiaoyuenvshen.png"
+  ],
+  "nodeTree": {
+    "options": {
+      "$type": "EditorCommon.JsonModel.Component.GUI.RootGUISurrogate, EditorCommon",
+      "visible": true,
+      "frameEvent": null,
+      "name": "Node",
+      "classname": "Node"
+    },
+    "children": [
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.PanelSurrogate, EditorCommon",
+          "bgColorR": 130,
+          "bgColorG": 222,
+          "bgColorB": 165,
+          "bgColorOpacity": 200,
+          "touchAble": true,
+          "visible": true,
+          "classType": "Panel",
+          "width": 1136.0,
+          "height": 640.0,
+          "sizePercentX": 1.0,
+          "sizePercentY": 1.0,
+          "actionTag": 663035982,
+          "tag": 61,
+          "anchorPointX": 0.0,
+          "anchorPointY": 0.0,
+          "name": "Panel_11",
+          "classname": "Panel"
+        },
+        "children": [],
+        "classname": "Panel"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.ImageViewSurrogate, EditorCommon",
+          "fileNameData": {
+            "resourceType": 0,
+            "path": "yun3.png",
+            "plistFile": ""
+          },
+          "scale9Width": 243.0,
+          "scale9Height": 237.0,
+          "x": 462.0,
+          "y": 267.0,
+          "flipX": true,
+          "visible": true,
+          "classType": "ImageView",
+          "width": 243.0,
+          "height": 237.0,
+          "positionPercentX": 0.40669015,
+          "positionPercentY": 0.4171875,
+          "sizePercentX": 0.07042254,
+          "sizePercentY": 0.125,
+          "actionTag": 500730621,
+          "tag": 44,
+          "ignoreSize": true,
+          "name": "ImageView_3",
+          "classname": "ImageView"
+        },
+        "children": [],
+        "classname": "ImageView"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.ImageViewSurrogate, EditorCommon",
+          "fileNameData": {
+            "resourceType": 0,
+            "path": "yun4.png",
+            "plistFile": ""
+          },
+          "scale9Width": 270.0,
+          "scale9Height": 248.0,
+          "x": 94.0,
+          "y": 520.0,
+          "flipX": true,
+          "visible": true,
+          "classType": "ImageView",
+          "width": 270.0,
+          "height": 248.0,
+          "positionPercentX": 0.0827464759,
+          "positionPercentY": 0.8125,
+          "sizePercentX": 0.07042254,
+          "sizePercentY": 0.125,
+          "actionTag": 87803372,
+          "tag": 43,
+          "ignoreSize": true,
+          "name": "ImageView_2",
+          "classname": "ImageView"
+        },
+        "children": [],
+        "classname": "ImageView"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.ImageViewSurrogate, EditorCommon",
+          "fileNameData": {
+            "resourceType": 0,
+            "path": "yun7.png",
+            "plistFile": ""
+          },
+          "scale9Width": 178.0,
+          "scale9Height": 148.0,
+          "x": 1045.0,
+          "y": 376.0,
+          "visible": true,
+          "classType": "ImageView",
+          "width": 178.0,
+          "height": 148.0,
+          "positionPercentX": 0.919894338,
+          "positionPercentY": 0.5875,
+          "sizePercentX": 0.07042254,
+          "sizePercentY": 0.125,
+          "actionTag": 569215646,
+          "tag": 45,
+          "ignoreSize": true,
+          "name": "ImageView_4",
+          "classname": "ImageView"
+        },
+        "children": [],
+        "classname": "ImageView"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.ImageViewSurrogate, EditorCommon",
+          "fileNameData": {
+            "resourceType": 0,
+            "path": "yun5.png",
+            "plistFile": ""
+          },
+          "scale9Width": 457.0,
+          "scale9Height": 199.0,
+          "x": 813.0,
+          "y": 300.0,
+          "visible": true,
+          "classType": "ImageView",
+          "width": 457.0,
+          "height": 199.0,
+          "positionPercentX": 0.715669036,
+          "positionPercentY": 0.46875,
+          "sizePercentX": 0.07042254,
+          "sizePercentY": 0.125,
+          "actionTag": 558034867,
+          "tag": 46,
+          "ignoreSize": true,
+          "name": "ImageView_5",
+          "classname": "ImageView"
+        },
+        "children": [],
+        "classname": "ImageView"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.ImageViewSurrogate, EditorCommon",
+          "fileNameData": {
+            "resourceType": 0,
+            "path": "protrait_jiaoyuenvshen.png",
+            "plistFile": ""
+          },
+          "scale9Width": 500.0,
+          "scale9Height": 772.0,
+          "x": 280.0,
+          "y": 319.0,
+          "scaleX": 0.751586735,
+          "scaleY": 0.820827544,
+          "visible": true,
+          "classType": "ImageView",
+          "width": 500.0,
+          "height": 772.0,
+          "positionPercentX": 0.246478871,
+          "positionPercentY": 0.4984375,
+          "sizePercentX": 0.07042254,
+          "sizePercentY": 0.125,
+          "actionTag": 862969109,
+          "tag": 42,
+          "ignoreSize": true,
+          "name": "ImageView_1",
+          "classname": "ImageView"
+        },
+        "children": [],
+        "classname": "ImageView"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.LabelSurrogate, EditorCommon",
+          "fontSize": 50,
+          "text": "最后的勇士",
+          "hAlignment": 1,
+          "x": 777.0,
+          "y": 497.0,
+          "visible": true,
+          "classType": "Label",
+          "width": 250.0,
+          "height": 57.0,
+          "positionPercentX": 0.683978856,
+          "positionPercentY": 0.7765625,
+          "sizePercentX": 0.08010563,
+          "sizePercentY": 0.0359375,
+          "actionTag": 441044771,
+          "tag": 62,
+          "ignoreSize": true,
+          "name": "Label_12",
+          "classname": "Label"
+        },
+        "children": [],
+        "classname": "Label"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.LabelSurrogate, EditorCommon",
+          "fontSize": 36,
+          "text": "开始征程",
+          "hAlignment": 1,
+          "x": 821.0,
+          "y": 300.0,
+          "visible": true,
+          "classType": "Label",
+          "width": 144.0,
+          "height": 42.0,
+          "positionPercentX": 0.722711265,
+          "positionPercentY": 0.46875,
+          "sizePercentX": 0.08010563,
+          "sizePercentY": 0.0359375,
+          "actionTag": 225406760,
+          "tag": 50,
+          "ignoreSize": true,
+          "name": "Label_9",
+          "classname": "Label"
+        },
+        "children": [],
+        "classname": "Label"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.LabelSurrogate, EditorCommon",
+          "fontSize": 30,
+          "text": "进阶",
+          "hAlignment": 1,
+          "x": 1062.0,
+          "y": 390.0,
+          "visible": true,
+          "classType": "Label",
+          "width": 60.0,
+          "height": 34.0,
+          "positionPercentX": 0.934859157,
+          "positionPercentY": 0.609375,
+          "sizePercentX": 0.08010563,
+          "sizePercentY": 0.0359375,
+          "actionTag": 18172074,
+          "tag": 51,
+          "ignoreSize": true,
+          "name": "Label_10",
+          "classname": "Label"
+        },
+        "children": [],
+        "classname": "Label"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.LabelSurrogate, EditorCommon",
+          "fontSize": 31,
+          "text": "制作",
+          "hAlignment": 1,
+          "x": 67.0,
+          "y": 519.0,
+          "visible": true,
+          "classType": "Label",
+          "width": 62.0,
+          "height": 36.0,
+          "positionPercentX": 0.0589788742,
+          "positionPercentY": 0.8109375,
+          "sizePercentX": 0.08010563,
+          "sizePercentY": 0.0359375,
+          "actionTag": 157627651,
+          "tag": 49,
+          "ignoreSize": true,
+          "name": "Label_8",
+          "classname": "Label"
+        },
+        "children": [],
+        "classname": "Label"
+      }
+    ],
+    "classname": "Node"
+  },
+  "action": {
+    "speed": 1.0,
+    "timelines": []
+  }
+}

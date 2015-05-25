@@ -1,0 +1,153 @@
+{
+  "version": "1.0.0.0",
+  "designWidth": 400,
+  "designHeight": 200,
+  "dataScale": 1.0,
+  "textures": [],
+  "texturesPng": [
+    "angry.png",
+    "b.png",
+    "a.png"
+  ],
+  "nodeTree": {
+    "options": {
+      "$type": "EditorCommon.JsonModel.Component.GUI.RootGUISurrogate, EditorCommon",
+      "visible": true,
+      "frameEvent": null,
+      "name": "Node",
+      "classname": "Node"
+    },
+    "children": [
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.ButtonSurrogate, EditorCommon",
+          "normalData": {
+            "resourceType": 0,
+            "path": "angry.png",
+            "plistFile": ""
+          },
+          "pressedData": {
+            "resourceType": 0,
+            "path": "angry.png",
+            "plistFile": ""
+          },
+          "disabledData": {
+            "resourceType": 0
+          },
+          "text": "",
+          "capInsetsWidth": 1.0,
+          "capInsetsHeight": 1.0,
+          "scale9Width": 160.0,
+          "scale9Height": 160.0,
+          "x": 325.0,
+          "y": 157.0,
+          "scaleX": 0.5,
+          "scaleY": 0.5,
+          "touchAble": true,
+          "visible": true,
+          "classType": "Button",
+          "width": 160.0,
+          "height": 160.0,
+          "positionPercentX": 0.6770833,
+          "positionPercentY": 0.490625,
+          "sizePercentX": 0.214583337,
+          "sizePercentY": 0.125,
+          "actionTag": 417762859,
+          "tag": 19,
+          "ignoreSize": true,
+          "name": "btn_skill",
+          "classname": "Button"
+        },
+        "children": [],
+        "classname": "Button"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.ButtonSurrogate, EditorCommon",
+          "normalData": {
+            "resourceType": 0,
+            "path": "b.png",
+            "plistFile": ""
+          },
+          "pressedData": {
+            "resourceType": 0,
+            "path": "b.png",
+            "plistFile": ""
+          },
+          "disabledData": {
+            "resourceType": 0
+          },
+          "text": "",
+          "capInsetsWidth": 1.0,
+          "capInsetsHeight": 1.0,
+          "scale9Width": 110.0,
+          "scale9Height": 111.0,
+          "x": 93.0,
+          "y": 82.0,
+          "touchAble": true,
+          "visible": true,
+          "classType": "Button",
+          "width": 110.0,
+          "height": 111.0,
+          "positionPercentX": 0.19375,
+          "positionPercentY": 0.25625,
+          "sizePercentX": 0.214583337,
+          "sizePercentY": 0.125,
+          "actionTag": 1001159647,
+          "tag": 20,
+          "ignoreSize": true,
+          "name": "btn_jump",
+          "classname": "Button"
+        },
+        "children": [],
+        "classname": "Button"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.ButtonSurrogate, EditorCommon",
+          "normalData": {
+            "resourceType": 0,
+            "path": "a.png",
+            "plistFile": ""
+          },
+          "pressedData": {
+            "resourceType": 0,
+            "path": "a.png",
+            "plistFile": ""
+          },
+          "disabledData": {
+            "resourceType": 0
+          },
+          "text": "",
+          "capInsetsWidth": 1.0,
+          "capInsetsHeight": 1.0,
+          "scale9Width": 110.0,
+          "scale9Height": 111.0,
+          "x": 263.0,
+          "y": 82.0,
+          "touchAble": true,
+          "visible": true,
+          "classType": "Button",
+          "width": 110.0,
+          "height": 111.0,
+          "positionPercentX": 0.547916651,
+          "positionPercentY": 0.25625,
+          "sizePercentX": 0.214583337,
+          "sizePercentY": 0.125,
+          "actionTag": 372934139,
+          "tag": 21,
+          "ignoreSize": true,
+          "name": "btn_attack",
+          "classname": "Button"
+        },
+        "children": [],
+        "classname": "Button"
+      }
+    ],
+    "classname": "Node"
+  },
+  "action": {
+    "speed": 1.0,
+    "timelines": []
+  }
+}

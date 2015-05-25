@@ -1,0 +1,113 @@
+{
+  "version": "1.0.0.0",
+  "designWidth": 1136,
+  "designHeight": 640,
+  "dataScale": 1.0,
+  "textures": [],
+  "texturesPng": [
+    "ui_zdsz_019.png"
+  ],
+  "nodeTree": {
+    "options": {
+      "$type": "EditorCommon.JsonModel.Component.GUI.RootGUISurrogate, EditorCommon",
+      "visible": true,
+      "frameEvent": null,
+      "name": "Node",
+      "classname": "Node"
+    },
+    "children": [
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.LabelAtlasSurrogate, EditorCommon",
+          "stringValue": "1",
+          "charMapFileData": {
+            "resourceType": 0,
+            "path": "ui_zdsz_014.png",
+            "plistFile": ""
+          },
+          "startCharMap": "0",
+          "itemWidth": 20,
+          "itemHeight": 25,
+          "x": 503.0,
+          "y": 331.0,
+          "scaleX": 3.0,
+          "scaleY": 3.0,
+          "visible": true,
+          "classType": "LabelAtlas",
+          "width": 20.0,
+          "height": 25.0,
+          "positionPercentX": 1.2575,
+          "positionPercentY": 1.655,
+          "sizePercentX": 0.6,
+          "sizePercentY": 0.16,
+          "actionTag": 648803939,
+          "tag": 30,
+          "anchorPointX": 1.0,
+          "ignoreSize": true,
+          "name": "label_num",
+          "classname": "LabelAtlas"
+        },
+        "children": [],
+        "classname": "LabelAtlas"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.ImageViewSurrogate, EditorCommon",
+          "fileNameData": {
+            "resourceType": 0,
+            "path": "ui_zdsz_019.png",
+            "plistFile": ""
+          },
+          "scale9Width": 53.0,
+          "scale9Height": 30.0,
+          "x": 587.0,
+          "y": 329.0,
+          "scaleX": 3.0,
+          "scaleY": 3.0,
+          "visible": true,
+          "classType": "ImageView",
+          "width": 53.0,
+          "height": 30.0,
+          "positionPercentX": 1.4675,
+          "positionPercentY": 1.645,
+          "sizePercentX": 0.2,
+          "sizePercentY": 0.4,
+          "actionTag": 93196666,
+          "tag": 28,
+          "ignoreSize": true,
+          "name": "image_round",
+          "classname": "ImageView"
+        },
+        "children": [],
+        "classname": "ImageView"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.PanelSurrogate, EditorCommon",
+          "colorType": 0,
+          "bgColorOpacity": 0,
+          "x": 356.0,
+          "y": 424.0,
+          "touchAble": true,
+          "visible": true,
+          "classType": "Panel",
+          "positionPercentX": 0.89,
+          "positionPercentY": 2.12,
+          "actionTag": 157970699,
+          "tag": 32,
+          "anchorPointX": 0.0,
+          "anchorPointY": 0.0,
+          "name": "layer_act",
+          "classname": "Panel"
+        },
+        "children": [],
+        "classname": "Panel"
+      }
+    ],
+    "classname": "Node"
+  },
+  "action": {
+    "speed": 1.0,
+    "timelines": []
+  }
+}

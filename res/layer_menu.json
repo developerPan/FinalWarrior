@@ -1,0 +1,182 @@
+{
+  "version": "1.0.0.0",
+  "designWidth": 1136,
+  "designHeight": 640,
+  "dataScale": 1.0,
+  "textures": [],
+  "texturesPng": [
+    "head_jiaoyuenvshen.png",
+    "image_loading_di.png",
+    "image_loading_bar.png",
+    "denglusongli.png"
+  ],
+  "nodeTree": {
+    "options": {
+      "$type": "EditorCommon.JsonModel.Component.GUI.RootGUISurrogate, EditorCommon",
+      "visible": true,
+      "frameEvent": null,
+      "name": "Node",
+      "classname": "Node"
+    },
+    "children": [
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.ImageViewSurrogate, EditorCommon",
+          "fileNameData": {
+            "resourceType": 0,
+            "path": "head_jiaoyuenvshen.png",
+            "plistFile": ""
+          },
+          "scale9Width": 92.0,
+          "scale9Height": 92.0,
+          "x": 90.0,
+          "y": 575.0,
+          "visible": true,
+          "classType": "ImageView",
+          "width": 92.0,
+          "height": 92.0,
+          "positionPercentX": 0.0792253539,
+          "positionPercentY": 0.8984375,
+          "sizePercentX": 0.07042254,
+          "sizePercentY": 0.125,
+          "actionTag": 661376774,
+          "tag": 34,
+          "ignoreSize": true,
+          "name": "ImageView_1",
+          "classname": "ImageView"
+        },
+        "children": [],
+        "classname": "ImageView"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.ImageViewSurrogate, EditorCommon",
+          "fileNameData": {
+            "resourceType": 0,
+            "path": "image_loading_di.png",
+            "plistFile": ""
+          },
+          "scale9Width": 614.0,
+          "scale9Height": 65.0,
+          "x": 291.0,
+          "y": 553.0,
+          "scaleX": 0.5,
+          "visible": true,
+          "classType": "ImageView",
+          "width": 614.0,
+          "height": 65.0,
+          "positionPercentX": 0.256161958,
+          "positionPercentY": 0.8640625,
+          "sizePercentX": 0.07042254,
+          "sizePercentY": 0.125,
+          "actionTag": 687079886,
+          "tag": 35,
+          "ignoreSize": true,
+          "name": "ImageView_2",
+          "classname": "ImageView"
+        },
+        "children": [],
+        "classname": "ImageView"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.LoadingBarSurrogate, EditorCommon",
+          "textureData": {
+            "resourceType": 0,
+            "path": "image_loading_bar.png",
+            "plistFile": ""
+          },
+          "x": 294.0,
+          "y": 553.0,
+          "scaleX": 0.5,
+          "visible": true,
+          "classType": "LoadingBar",
+          "width": 614.0,
+          "height": 65.0,
+          "positionPercentX": 0.258802831,
+          "positionPercentY": 0.8640625,
+          "sizePercentX": 0.308098584,
+          "sizePercentY": 0.0375,
+          "actionTag": 361242062,
+          "tag": 36,
+          "ignoreSize": true,
+          "name": "slider",
+          "classname": "LoadingBar"
+        },
+        "children": [],
+        "classname": "LoadingBar"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.ButtonSurrogate, EditorCommon",
+          "normalData": {
+            "resourceType": 0,
+            "path": "denglusongli.png",
+            "plistFile": ""
+          },
+          "pressedData": {
+            "resourceType": 0,
+            "path": "denglusongli.png",
+            "plistFile": ""
+          },
+          "disabledData": {
+            "resourceType": 0
+          },
+          "text": "",
+          "capInsetsWidth": 1.0,
+          "capInsetsHeight": 1.0,
+          "scale9Width": 106.0,
+          "scale9Height": 109.0,
+          "x": 940.0,
+          "y": 571.0,
+          "touchAble": true,
+          "visible": true,
+          "classType": "Button",
+          "width": 106.0,
+          "height": 109.0,
+          "positionPercentX": 0.827464759,
+          "positionPercentY": 0.8921875,
+          "sizePercentX": 0.09066901,
+          "sizePercentY": 0.0625,
+          "actionTag": 580920929,
+          "tag": 37,
+          "ignoreSize": true,
+          "name": "btn_stone",
+          "classname": "Button"
+        },
+        "children": [],
+        "classname": "Button"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.LabelSurrogate, EditorCommon",
+          "fontSize": 30,
+          "text": "Lv.3",
+          "x": 166.0,
+          "y": 601.0,
+          "visible": true,
+          "classType": "Label",
+          "width": 54.0,
+          "height": 34.0,
+          "positionPercentX": 0.146126762,
+          "positionPercentY": 0.9390625,
+          "sizePercentX": 0.08010563,
+          "sizePercentY": 0.0359375,
+          "actionTag": 496544631,
+          "tag": 40,
+          "anchorPointX": 0.0,
+          "ignoreSize": true,
+          "name": "label_lv",
+          "classname": "Label"
+        },
+        "children": [],
+        "classname": "Label"
+      }
+    ],
+    "classname": "Node"
+  },
+  "action": {
+    "speed": 1.0,
+    "timelines": []
+  }
+}

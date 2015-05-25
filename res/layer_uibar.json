@@ -1,0 +1,82 @@
+{
+  "version": "1.0.0.0",
+  "designWidth": 80,
+  "designHeight": 6,
+  "dataScale": 1.0,
+  "textures": [],
+  "texturesPng": [
+    "xue_back.png",
+    "xue_fore.png"
+  ],
+  "nodeTree": {
+    "options": {
+      "$type": "EditorCommon.JsonModel.Component.GUI.RootGUISurrogate, EditorCommon",
+      "visible": true,
+      "frameEvent": null,
+      "name": "Node",
+      "classname": "Node"
+    },
+    "children": [
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.ImageViewSurrogate, EditorCommon",
+          "fileNameData": {
+            "resourceType": 0,
+            "path": "xue_back.png",
+            "plistFile": ""
+          },
+          "scale9Height": 6.0,
+          "x": 40.0,
+          "y": 3.0,
+          "visible": true,
+          "classType": "ImageView",
+          "width": 80.0,
+          "height": 6.0,
+          "positionPercentX": 0.03521127,
+          "positionPercentY": 0.0046875,
+          "sizePercentX": 0.07042254,
+          "sizePercentY": 0.125,
+          "actionTag": 766089258,
+          "tag": 64,
+          "ignoreSize": true,
+          "name": "ImageView_1",
+          "classname": "ImageView"
+        },
+        "children": [],
+        "classname": "ImageView"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.LoadingBarSurrogate, EditorCommon",
+          "textureData": {
+            "resourceType": 0,
+            "path": "xue_fore.png",
+            "plistFile": ""
+          },
+          "x": 40.0,
+          "y": 3.0,
+          "visible": true,
+          "classType": "LoadingBar",
+          "width": 80.0,
+          "height": 6.0,
+          "positionPercentX": 0.03521127,
+          "positionPercentY": 0.0046875,
+          "sizePercentX": 0.308098584,
+          "sizePercentY": 0.0375,
+          "actionTag": 839256728,
+          "tag": 65,
+          "ignoreSize": true,
+          "name": "LoadingBar_2",
+          "classname": "LoadingBar"
+        },
+        "children": [],
+        "classname": "LoadingBar"
+      }
+    ],
+    "classname": "Node"
+  },
+  "action": {
+    "speed": 1.0,
+    "timelines": []
+  }
+}
