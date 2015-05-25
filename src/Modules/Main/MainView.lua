@@ -24,8 +24,7 @@ function MainView:initMap()
     self:addChild(self.land,0)
 end
 --移动地图
-function MainView:moveMap(heroPosX,state)
-    print("~~~",self.land:getPositionX(),heroPosX)
+function MainView:moveMap(heroPosX,state) 
     local landSize = self.land:getContentSize()
     local sceneWidth = PUIHelper:getVisibleSize().width
     if(heroPosX > sceneWidth / 2 and heroPosX < landSize.width - sceneWidth / 2)  then
@@ -35,16 +34,11 @@ function MainView:moveMap(heroPosX,state)
         else
             offset = 5
         end
-        self.land:setPositionX(self.land:getPositionX()+offset) 
-    end
---    if((self:getContentSize().width/2+self.land:getPositionX()>50)
---    or (self.land:getPositionX()<0 and float >0))then--地图要超出又边界后不移动,留白50是因为动画的锚点没做在脚下，牺牲一部分的地图
---        self.land:setPositionX(self.land:getPositionX()+float)
---        return true
---    else
---        print("地图不移动")
---        return false
---    end
+        local posX = self.land:getPositionX()+offset
+        if(posX > 0) then posX = 0 end
+        if(posX < sceneWidth - landSize.width) then posX = sceneWidth - landSize.width end
+        self.land:setPositionX(posX) 
+    end 
 end
 
  
