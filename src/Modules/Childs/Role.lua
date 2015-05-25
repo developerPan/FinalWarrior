@@ -1,5 +1,5 @@
 local Role  =   class("Role",function() 
-    return cc.Layer:create()
+    return cc.Node:create()
 end)
 
 local PAnimation    =   require("Utility/PAnimation")
@@ -30,6 +30,15 @@ function Role:ctor(animName,actList)
     self:runAction(Role.STATE.IDLE)
     self:setScale(0.7)
     return self
+end
+
+--设置攻击距离
+function Role:setAttRectX(rectX)
+	self.attRectX = rectX
+end
+
+function Role:getAttRectX(rectX)
+    return self.attRectX
 end
 
 function Role:setHp(hp)
@@ -109,8 +118,8 @@ function Role:runAction(actState,duration,func,loop)
     elseif(actState == Role.STATE.ATTACK)then
         loop  =   loop or 0
         self.anim:setSpeed(3)
-        if(self.aframe)then self.aframe:setVisible(true) end
-        self.anim:setPositionX(self.anim:getPositionX()+15)
+        if(self.aframe)then self.aframe:setVisible(true) end 
+        self:setPositionX(self:getPositionX()+15)
         func = function() self:runAction(Role.STATE.IDLE) end
     elseif(actState == Role.STATE.HIT)then
         loop  =   loop or 0
@@ -150,30 +159,35 @@ end
 function Role:beHitted()
     self:runAction(Role.STATE.HIT)
 end
-function Role:attack()
-
+function Role:attack() 
     self.attackCounts = self.attackCounts+1
     if(self.attackCounts >= 3)then--重击
         self.attackCounts = 0
         self:specialAttack()
     else
-        print("普通攻击")
-        self:runAction(Role.STATE.ATTACK)
+        self:normalAttack()
     end
+end
+
+--普通攻击
+function Role:normalAttack() 
+    local loop  = 0
+    self.anim:setSpeed(3)
+    self:setPositionX(self:getPositionX()+15)
+    local func = function() self:runAction(Role.STATE.IDLE) end
+    self.anim:playd(Role.STATE.ATTACK,loop,func,0)
 end
 
 function Role:specialAttack()
 
 end
-function Role:run(cmd,isInPlace)
-    local RockerVC  =   require("Rocker/RockerViewController")
-    if(isInPlace ~= true)then
-        if(cmd == "LEFT")then
-            self:setPositionX( self:getPositionX()-5 )
-        elseif(cmd == "RIGHT")then
-            self:setPositionX(self:getPositionX()+5)
-        end
-    end
+function Role:run(cmd)
+    local RockerVC  =   require("Rocker/RockerViewController") 
+    if(cmd == "LEFT")then
+        self:setPositionX( self:getPositionX() - self.runSpeed )
+    elseif(cmd == "RIGHT")then
+        self:setPositionX(self:getPositionX() + self.runSpeed)
+    end 
     --更新头的朝向
     self:updateFace(cmd)
     if(self.state == Role.STATE.RUN)then return end
@@ -196,6 +210,7 @@ end
 
 function Role:stopAction()
     if(self.state == Role.STATE.IDLE)then return end
-    self:runAction(Role.STATE.IDLE)
+    self.state = Role.STATE.IDLE
+    self:runAction(Role.STATE.IDLE) 
 end
 return Role

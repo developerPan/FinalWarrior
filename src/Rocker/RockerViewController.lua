@@ -42,7 +42,7 @@ function RockerViewController:startRocker()
             self.lastX  =   posX
             self.view.dot:setPosition(cc.p(posX,posY))
         else
-            --摇杆圆盘半径长60，缩放比例1.7 
+            --半径长60
             local m1 = self.view.bg:getPositionX()
             local m2 = self.view.bg:getPositionY()
             local x = 60*1.7*(posX-m1)/math.sqrt(math.pow((posX-m1),2)+math.pow((posY-m2),2))+m1

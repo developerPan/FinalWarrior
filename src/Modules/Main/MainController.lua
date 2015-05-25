@@ -40,36 +40,23 @@ function MainController:bindAllListener()
     end
     PEvent:registerScriptHanlder(self.view,onEnter,onExit)
 end
+ 
+
 --处理走路相关
 function MainController:handlerWalk()
     --处理角色不能超过左边界
-    if((self.hero:getPositionX() < 0 and self.rockerVC.state == RockerViewController.STATE.LEFT) or
-        (self.hero:getPositionX() >PUIHelper:getVisibleSize().width-130 and self.rockerVC.state == RockerViewController.STATE.RIGHT) )then
+    local landSize = self.view.land:getContentSize()
+    if((self.hero:getPositionX() < 50 and self.rockerVC.state == RockerViewController.STATE.LEFT) or
+        (self.hero:getPositionX() >landSize.width - 150 and self.rockerVC.state == RockerViewController.STATE.RIGHT) )then
         GLog:testInfo("超出屏幕边界")
         return
     end
 
     if(self.rockerVC.state == RockerViewController.STATE.LEFT or self.rockerVC.state == RockerViewController.STATE.RIGHT)then
-        if(self.hero:getState() ~=Role.STATE.ATTACK)then
-            --处理角色从左到达屏幕中间
-            if(self.hero:isInMiddlePos() == true and self.rockerVC.state == RockerViewController.STATE.RIGHT )then
-                GLog:testInfo("到达屏幕中间")
-                if(self.view:moveMap(-5))then
-                    self.hero:run(self.rockerVC.state,true)
-                else
-                    self.hero:run(self.rockerVC.state,false)
-                end
-            elseif(self.hero:isInMiddlePos() == true and self.rockerVC.state == RockerViewController.STATE.LEFT )then
-                GLog:testInfo("到达屏幕中间")
-                if(self.view:moveMap(5))then
-                    self.hero:run(self.rockerVC.state,true)
-                else
-                    self.hero:run(self.rockerVC.state,false)
-                end
-            else
-                self.hero:run(self.rockerVC.state,false)
-            end
-
+        if(self.hero:getState() ~=Role.STATE.ATTACK)then 
+            local heroPosX = self.hero:getPositionX()
+            self.view:moveMap(heroPosX,self.rockerVC.state)
+            self.hero:run(self.rockerVC.state) 
         end
     elseif(self.rockerVC.state == RockerViewController.STATE.CANCEL)then
         if(self.hero:getState() ==Role.STATE.RUN)then
@@ -149,10 +136,10 @@ function MainController:initHero()
     hero:setHp(180)
     hero:setMaxHp(200)
     self.menuView:setSlider(hero:getHpPercent())
-    hero:fixPos(105,-20)
+    hero:fixPos(cc.p(65,107))
     hero:bindRect(Role.RECTKEY.ATTACK,200,145,0)
     hero:bindRect(Role.RECTKEY.HIT,100,145,-10)
-    self.view:addChild(hero,100)
+    self.view.land:addChild(hero,100)
     return hero
  
 end
@@ -161,12 +148,13 @@ end
 function MainController:initMonsters()
     local monsters = {}
     local monster = Monster.new("xunjiechihou")
+    monster.mainController = self
+    monster:startUpdate()
     monster:setPosition(self:getFixedPosition(400,0))
-    monster:fixPos(85,-130)
-    self.view:addChild(monster)
+    hero:fixPos(cc.p(65,107))
+    self.view.land:addChild(monster)
     --monster.bloodSlider:setPosition(cc.p(monster:getContentSize().width/2,monster:getContentSize().height/2))
-    monster.bloodSlider:setPositionX(105)
-    monster.bloodSlider:setPositionY(20)
+
     monster:setLocalZOrder(1)
     table.insert(monsters,monster)
     

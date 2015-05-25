@@ -7,6 +7,7 @@ end)
 function Hero:ctor(...)
     print("~~~~")
     self:updateFace("RIGHT")
+    self.runSpeed = 5
 end
 
 function Hero:specialAttack()
@@ -29,12 +30,4 @@ function Hero:jump()
     self:runAction(Role.STATE.JUMP)
 end
 
-function Hero:isInMiddlePos()
-    print("middle",PUIHelper:getVisibleSize().width/2 - self:getPositionX())
-    if(math.abs(PUIHelper:getVisibleSize().width/2 - self:getPositionX())<=5)then--每桢移动量是5
-        return true
-    else
-        return false
-    end
-end
 return Hero
