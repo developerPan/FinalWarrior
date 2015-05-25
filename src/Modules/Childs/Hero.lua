@@ -7,7 +7,13 @@ end)
 function Hero:ctor(...)
     print("~~~~")
     self:updateFace("RIGHT")
+    self.att = 44
+    self.def = 15 
     self.runSpeed = 5
+    self.attRectX = 5 --攻击距离
+    self.attRate = 0.6  --以秒为单位
+    self.time = 0  
+    self.lastAttTime = 0 
 end
 
 function Hero:specialAttack()

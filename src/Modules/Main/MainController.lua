@@ -68,25 +68,41 @@ function MainController:handlerWalk()
 end
 
 function MainController:gameOver()
-
+    print("@@game Over")
 end
 
 function MainController:handleAttack()
-    if(self.hero:getHpPercent()~=self.menuView.slider:getPercent()/100)then --减少刷新次数，血量有变化才刷新
-        if(not self.menuView:setSlider(self.hero:getHpPercent()))then   --更新血量失败，即角色死亡
+    local percent = self.hero:getHpPercent() 
+    if(percent ~= self.menuView.slider:getPercent())then --减少刷新次数，血量有变化才刷新 
+        self.menuView:setSlider(percent)
+        if percent <= 0 then
             self:gameOver()
         end
     end
 end
 function MainController:startUpdate()
     --帧刷新update
-    local function Update()
-    
+    local function Update() 
         self:handlerWalk()
-            self:handleAttack()
+        self:handleAttack()
     end
     self.view:scheduleUpdateWithPriorityLua(Update,0)
     
+end
+
+--檢測英雄此時能攻擊的對象
+function MainController:checkHeroAttTargets()
+    local rectX = self.hero.bodyWidth + self.hero.attRectX
+    local targets = {}
+    for key, monster in ipairs(self.monsters) do
+       if monster then
+           local distance = math.abs(self.hero:getPositionX() - monster:getPositionX())
+    	   if(distance <= rectX)and monster.hp > 0 then --可以攻击
+                table.insert(targets,monster)
+    	   end
+	   end
+	end
+	return targets
 end
 --初始化键盘
 function MainController:initKeyboard()
@@ -98,9 +114,8 @@ function MainController:initKeyboard()
     --监听键盘事件
     PUtility:bindTouchedButton(kvc.btn_attack,function()
         if(self.hero:getState() ~= Role.STATE.ATTACK)then
-            self.rockerVC:stopRocker()
-            self.hero:attack()
-            self.hero:setHp(self.hero:getHp()-10)
+            self.rockerVC:stopRocker() 
+            self.hero:attack(self:checkHeroAttTargets()) 
             end
     end,0.2)
     
@@ -133,7 +148,7 @@ end
 function MainController:initHero()
     local hero =  Hero.new("jiaoyuenvshen") 
     hero:setPosition(self:getFixedPosition(0,0))
-    hero:setHp(180)
+    hero:setHp(200)
     hero:setMaxHp(200)
     self.menuView:setSlider(hero:getHpPercent())
 --    hero:fixPos(30,0)

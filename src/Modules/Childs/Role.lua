@@ -53,13 +53,32 @@ function Role:setHp(hp)
     return true
 end
 
+function Role:reduceHp(dam)
+    if(dam and dam >= 0)then 
+        self.hp = self.hp - dam
+        if(self.hp <= 0) then
+            self.hp = 0
+            self:deathAin()
+            return false
+        else
+            return true
+        end    
+    end 
+   
+end
+
+
+--死亡表现
+function Role:deathAin() 
+	self.anim:runAction(cc.FadeOut:create(0.8))
+end
 function Role:getHp()
     return self.hp
 end
 
 function Role:getHpPercent()
     if(self.hp and self.maxHp)then
-        return self.hp/self.maxHp
+        return self.hp/self.maxHp *100
     else
         return 0
     end
@@ -162,18 +181,28 @@ end
 function Role:beHitted()
     self:runAction(Role.STATE.HIT)
 end
-function Role:attack() 
+function Role:attack(targets) 
     self.attackCounts = self.attackCounts+1
+    local att = 0
     if(self.attackCounts >= 3)then--重击
         self.attackCounts = 0
         self:specialAttack()
+        att = self.att * 2
     else
         self:normalAttack()
+        att = self.att
     end
+    
+    for key, target in ipairs(targets) do
+        local dam = att - target.def
+        if dam <= 0 then dam = 1 end
+        print("@@伤害",dam)
+        target:reduceHp(dam)
+    end  
 end
 
 --普通攻击
-function Role:normalAttack() 
+function Role:normalAttack(targets) 
     local loop  = 0
     self.anim:setSpeed(3)
     self:setPositionX(self:getPositionX() + 5)

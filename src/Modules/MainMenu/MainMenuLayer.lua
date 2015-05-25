@@ -14,7 +14,7 @@ function MainMenuLayer:init()
 end
 
 function MainMenuLayer:setSlider(percent)
-    self.slider:setPercent(percent*100)
+    self.slider:setPercent(percent)
 end
 
 return MainMenuLayer
