@@ -1,5 +1,5 @@
 local Role  =   class("Role",function() 
-    return cc.LayerColor:create(cc.c4b(255,9,9,255))
+    return cc.Node:create()--cc.LayerColor:create(cc.c4b(255,9,9,255))
 end)
 
 local PAnimation    =   require("Utility/PAnimation")
@@ -27,7 +27,7 @@ function Role:ctor(animName,actList)
     self:addChild(self.anim,100)
     self:initActionList(actList)
     self.attackCounts = 0
-    self:runAction(Role.STATE.IDLE)
+    self:runRoleAction(Role.STATE.IDLE)
     self:setScale(0.7)  
     
     self.bodyWidth = 80 --身长   判断攻击距离时需要算上该宽度
@@ -131,7 +131,7 @@ function Role:getState()
     return self.state
 end
 
-function Role:runAction(actState,duration,func,loop)
+function Role:runRoleAction(actState,duration,func,loop)
     if(self.aframe)then self.aframe:setVisible(false)end
     self.state = actState
     if(actState == Role.STATE.IDLE)then
@@ -142,11 +142,11 @@ function Role:runAction(actState,duration,func,loop)
         self.anim:setSpeed(3)
         if(self.aframe)then self.aframe:setVisible(true) end 
         self:setPositionX(self:getPositionX()+15)
-        func = function() self:runAction(Role.STATE.IDLE) end
+        func = function() self:runRoleAction(Role.STATE.IDLE) end
     elseif(actState == Role.STATE.HIT)then
         loop  =   loop or 0
         self.anim:setSpeed(1)
-        func = function() self:runAction(Role.STATE.IDLE) end
+        func = function() self:runRoleAction(Role.STATE.IDLE) end
     elseif(actState == Role.STATE.RUN)then
         loop  =   loop or 1
         self.anim:setSpeed(1)
@@ -164,10 +164,11 @@ function Role:runAction(actState,duration,func,loop)
             end)))
         else]]if(self.jumpState == nil or self.jumpState == Role.JUMPSTATE.END)then   --没打断的跳跃
             self.jumpState = Role.JUMPSTATE.JUMPING
-            self.anim:runAction(cc.Sequence:create(jumpForAct,cc.CallFunc:create(function()
+            local actions = cc.Sequence:create(jumpForAct,cc.CallFunc:create(function()
                 self.jumpState = Role.JUMPSTATE.END
                 self.state = Role.STATE.IDLE
-            end)))
+            end))
+            self:runAction(actions)
         end
         return
     end
@@ -179,17 +180,17 @@ function Role:getAnimation()
     return self.anim
 end
 function Role:beHitted()
-    self:runAction(Role.STATE.HIT)
+    self:runRoleAction(Role.STATE.HIT)
 end
-function Role:attack(targets) 
+function Role:attack(targets)  
     self.attackCounts = self.attackCounts+1
     local att = 0
     if(self.attackCounts >= 3)then--重击
         self.attackCounts = 0
-        self:specialAttack()
+        self:specialAttack(targets)
         att = self.att * 2
     else
-        self:normalAttack()
+        self:normalAttack(targets)
         att = self.att
     end
     
@@ -198,21 +199,11 @@ function Role:attack(targets)
         if dam <= 0 then dam = 1 end
         print("@@伤害",dam)
         target:reduceHp(dam)
-    end  
+    end 
 end
 
---普通攻击
-function Role:normalAttack(targets) 
-    local loop  = 0
-    self.anim:setSpeed(3)
-    self:setPositionX(self:getPositionX() + 5)
-    local func = function() self:runAction(Role.STATE.IDLE) end
-    self.anim:playd(Role.STATE.ATTACK,loop,func,0)
-end
+ 
 
-function Role:specialAttack()
-
-end
 function Role:run(cmd)
     local RockerVC  =   require("Rocker/RockerViewController") 
     if(cmd == "LEFT")then
@@ -223,7 +214,7 @@ function Role:run(cmd)
     --更新头的朝向
     self:updateFace(cmd)
     if(self.state == Role.STATE.RUN)then return end
-    self:runAction(Role.STATE.RUN)
+    self:runRoleAction(Role.STATE.RUN)
 
 end
 
@@ -243,6 +234,6 @@ end
 function Role:stopAction()
     if(self.state == Role.STATE.IDLE)then return end
     self.state = Role.STATE.IDLE
-    self:runAction(Role.STATE.IDLE) 
+    self:runRoleAction(Role.STATE.IDLE) 
 end
 return Role

@@ -46,8 +46,7 @@ end
 function MainController:handlerWalk()
     --处理角色不能超过左边界
     local landSize = self.view.land:getContentSize()
-    if((self.hero:getPositionX() < 50 and self.rockerVC.state == RockerViewController.STATE.LEFT) or
-        (self.hero:getPositionX() >landSize.width - 150 and self.rockerVC.state == RockerViewController.STATE.RIGHT) )then
+    if((self.hero:getPositionX() < 50) or (self.hero:getPositionX() >landSize.width - 150) )then
         GLog:testInfo("超出屏幕边界")
         return
     end
@@ -113,8 +112,8 @@ function MainController:initKeyboard()
     
     --监听键盘事件
     PUtility:bindTouchedButton(kvc.btn_attack,function()
-        if(self.hero:getState() ~= Role.STATE.ATTACK)then
-            self.rockerVC:stopRocker() 
+        if(self.hero:getState() ~= Role.STATE.ATTACK) and self.hero:checkAttack() then
+            self.rockerVC:stopRocker()  
             self.hero:attack(self:checkHeroAttTargets()) 
             end
     end,0.2)
@@ -147,9 +146,10 @@ end
 --添加主角
 function MainController:initHero()
     local hero =  Hero.new("jiaoyuenvshen") 
-    hero:setPosition(self:getFixedPosition(0,0))
+    hero:setPosition(self:getFixedPosition(0,0)) 
     hero:setHp(200)
     hero:setMaxHp(200)
+    hero:startUpdate()
     self.menuView:setSlider(hero:getHpPercent())
 --    hero:fixPos(30,0)
 --    hero:bindRect(Role.RECTKEY.ATTACK,200,145,0)

@@ -15,7 +15,7 @@ function Monster:ctor(...)
     self.spyRectX = 300
     
     self.attRectX = 5 --攻击距离
-    self.attRate = 0.6  --以秒为单位
+    self.attRate = 0.8  --以秒为单位
     self.time = 0  
     self.lastAttTime = 0
     self.runSpeed = 3
@@ -47,7 +47,7 @@ end
 
 --小怪的AI 
 function Monster:updeteState(dt)
-    if self.hp <= 0 then
+    if self.hp <= 0 and self.state == Role.STATE.HIT then
         return
     end
     
@@ -88,7 +88,61 @@ end
 --死亡表现
 function Monster:deathAin() 
     local func = cc.CallFunc:create(function()self:setVisible(false) end)
-    self.anim:runAction(cc.Sequence:create(cc.FadeOut:create(0.3),func))
+    self.anim:runAction(cc.Sequence:create(cc.FadeOut:create(0.6),func))
+end
+
+function Role:beHitted(attacker)
+    self.lastAttTime = self.time 
+    if(attacker:getPositionX() > self:getPositionX()) then  --在右侧
+        self:setPositionX(self:getPositionX() - 30)
+    else
+        self:setPositionX(self:getPositionX() + 30)
+    end
+    self:runRoleAction(Role.STATE.HIT) 
+    self.state = Role.STATE.HIT
+end
+
+function Role:beCritHitted(attacker)
+    self.lastAttTime = self.time
+    local mul = -self.anim:getScaleX() 
+    local jumpAct = cc.JumpBy:create(0.4,cc.p(20*mul,0),80,1)
+    local jumpForAct = cc.Spawn:create(jumpAct,cc.MoveBy:create(0.5,cc.p(160*mul,0))) 
+    self.jumpState = Role.JUMPSTATE.JUMPING
+    local actions = cc.Sequence:create(jumpForAct,cc.CallFunc:create(function() 
+        self.state = Role.STATE.IDLE
+    end))
+    self:runAction(actions)        
+    self:runRoleAction(Role.STATE.HIT) 
+    self.state = Role.STATE.HIT
+end
+
+--普通攻击
+function Monster:normalAttack(targets) 
+    local loop  = 0
+    self.anim:setSpeed(1) 
+    local attacker = targets[1]
+    if(attacker:getPositionX() > self:getPositionX()) then  --在右侧
+        self:setPositionX(self:getPositionX() + 15)
+    else
+        self:setPositionX(self:getPositionX() - 15)
+    end 
+    local func = function() self:runRoleAction(Role.STATE.IDLE) end
+    self.anim:playd(Role.STATE.ATTACK,loop,func,0)
+    attacker:beHitted(self)
+end
+
+function Monster:specialAttack(targets)
+    local loop  = 0
+    self.anim:setSpeed(0.5) 
+    local attacker = targets[1]
+    if(attacker:getPositionX() > self:getPositionX()) then  --在右侧
+        self:setPositionX(self:getPositionX() + 15)
+    else
+        self:setPositionX(self:getPositionX() - 15)
+    end 
+    local func = function() self:runRoleAction(Role.STATE.IDLE) end
+    self.anim:playd(Role.STATE.ATTACK,loop,func,0)
+    attacker:beCritHitted(self)
 end
 
 return Monster
