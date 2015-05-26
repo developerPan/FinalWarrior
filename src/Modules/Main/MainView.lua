@@ -1,4 +1,4 @@
-local MainView  =   class("MainView")
+ local MainView  =   class("MainView")
 local PUIHelper  =   require("Utility/PUIHelper")
 local RockerViewController  =   require("Rocker/RockerViewController")
 

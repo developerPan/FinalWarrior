@@ -5,10 +5,8 @@
   "dataScale": 1.0,
   "textures": [],
   "texturesPng": [
+    "yun2.png",
     "yun3.png",
-    "yun4.png",
-    "yun7.png",
-    "yun5.png",
     "protrait_jiaoyuenvshen.png"
   ],
   "nodeTree": {
@@ -46,6 +44,129 @@
       },
       {
         "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.ButtonSurrogate, EditorCommon",
+          "normalData": {
+            "resourceType": 0,
+            "path": "yun2.png",
+            "plistFile": ""
+          },
+          "pressedData": {
+            "resourceType": 0,
+            "path": "yun2.png",
+            "plistFile": ""
+          },
+          "disabledData": {
+            "resourceType": 0
+          },
+          "text": "",
+          "capInsetsWidth": 1.0,
+          "capInsetsHeight": 1.0,
+          "scale9Width": 466.0,
+          "scale9Height": 206.0,
+          "x": 945.0,
+          "y": 355.0,
+          "touchAble": true,
+          "visible": true,
+          "classType": "Button",
+          "width": 466.0,
+          "height": 206.0,
+          "positionPercentX": 0.8318662,
+          "positionPercentY": 0.5546875,
+          "sizePercentX": 0.09066901,
+          "sizePercentY": 0.0625,
+          "actionTag": 547835451,
+          "tag": 164,
+          "ignoreSize": true,
+          "name": "btn_upgrade",
+          "classname": "Button"
+        },
+        "children": [],
+        "classname": "Button"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.ButtonSurrogate, EditorCommon",
+          "normalData": {
+            "resourceType": 0,
+            "path": "yun2.png",
+            "plistFile": ""
+          },
+          "pressedData": {
+            "resourceType": 0,
+            "path": "yun2.png",
+            "plistFile": ""
+          },
+          "disabledData": {
+            "resourceType": 0
+          },
+          "text": "",
+          "capInsetsWidth": 1.0,
+          "capInsetsHeight": 1.0,
+          "scale9Width": 466.0,
+          "scale9Height": 206.0,
+          "x": 804.0,
+          "y": 297.0,
+          "touchAble": true,
+          "visible": true,
+          "classType": "Button",
+          "width": 466.0,
+          "height": 206.0,
+          "positionPercentX": 0.7077465,
+          "positionPercentY": 0.4640625,
+          "sizePercentX": 0.09066901,
+          "sizePercentY": 0.0625,
+          "actionTag": 583436186,
+          "tag": 163,
+          "ignoreSize": true,
+          "name": "btn_start",
+          "classname": "Button"
+        },
+        "children": [],
+        "classname": "Button"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.ButtonSurrogate, EditorCommon",
+          "normalData": {
+            "resourceType": 0,
+            "path": "yun3.png",
+            "plistFile": ""
+          },
+          "pressedData": {
+            "resourceType": 0,
+            "path": "yun3.png",
+            "plistFile": ""
+          },
+          "disabledData": {
+            "resourceType": 0
+          },
+          "text": "",
+          "capInsetsWidth": 1.0,
+          "capInsetsHeight": 1.0,
+          "scale9Width": 243.0,
+          "scale9Height": 237.0,
+          "x": 77.0,
+          "y": 498.0,
+          "touchAble": true,
+          "visible": true,
+          "classType": "Button",
+          "width": 243.0,
+          "height": 237.0,
+          "positionPercentX": 0.06778169,
+          "positionPercentY": 0.778125,
+          "sizePercentX": 0.09066901,
+          "sizePercentY": 0.0625,
+          "actionTag": 514373899,
+          "tag": 165,
+          "ignoreSize": true,
+          "name": "btn_make",
+          "classname": "Button"
+        },
+        "children": [],
+        "classname": "Button"
+      },
+      {
+        "options": {
           "$type": "EditorCommon.JsonModel.Component.GUI.ImageViewSurrogate, EditorCommon",
           "fileNameData": {
             "resourceType": 0,
@@ -69,94 +190,6 @@
           "tag": 44,
           "ignoreSize": true,
           "name": "ImageView_3",
-          "classname": "ImageView"
-        },
-        "children": [],
-        "classname": "ImageView"
-      },
-      {
-        "options": {
-          "$type": "EditorCommon.JsonModel.Component.GUI.ImageViewSurrogate, EditorCommon",
-          "fileNameData": {
-            "resourceType": 0,
-            "path": "yun4.png",
-            "plistFile": ""
-          },
-          "scale9Width": 270.0,
-          "scale9Height": 248.0,
-          "x": 94.0,
-          "y": 520.0,
-          "flipX": true,
-          "visible": true,
-          "classType": "ImageView",
-          "width": 270.0,
-          "height": 248.0,
-          "positionPercentX": 0.0827464759,
-          "positionPercentY": 0.8125,
-          "sizePercentX": 0.07042254,
-          "sizePercentY": 0.125,
-          "actionTag": 87803372,
-          "tag": 43,
-          "ignoreSize": true,
-          "name": "ImageView_2",
-          "classname": "ImageView"
-        },
-        "children": [],
-        "classname": "ImageView"
-      },
-      {
-        "options": {
-          "$type": "EditorCommon.JsonModel.Component.GUI.ImageViewSurrogate, EditorCommon",
-          "fileNameData": {
-            "resourceType": 0,
-            "path": "yun7.png",
-            "plistFile": ""
-          },
-          "scale9Width": 178.0,
-          "scale9Height": 148.0,
-          "x": 1045.0,
-          "y": 376.0,
-          "visible": true,
-          "classType": "ImageView",
-          "width": 178.0,
-          "height": 148.0,
-          "positionPercentX": 0.919894338,
-          "positionPercentY": 0.5875,
-          "sizePercentX": 0.07042254,
-          "sizePercentY": 0.125,
-          "actionTag": 569215646,
-          "tag": 45,
-          "ignoreSize": true,
-          "name": "ImageView_4",
-          "classname": "ImageView"
-        },
-        "children": [],
-        "classname": "ImageView"
-      },
-      {
-        "options": {
-          "$type": "EditorCommon.JsonModel.Component.GUI.ImageViewSurrogate, EditorCommon",
-          "fileNameData": {
-            "resourceType": 0,
-            "path": "yun5.png",
-            "plistFile": ""
-          },
-          "scale9Width": 457.0,
-          "scale9Height": 199.0,
-          "x": 813.0,
-          "y": 300.0,
-          "visible": true,
-          "classType": "ImageView",
-          "width": 457.0,
-          "height": 199.0,
-          "positionPercentX": 0.715669036,
-          "positionPercentY": 0.46875,
-          "sizePercentX": 0.07042254,
-          "sizePercentY": 0.125,
-          "actionTag": 558034867,
-          "tag": 46,
-          "ignoreSize": true,
-          "name": "ImageView_5",
           "classname": "ImageView"
         },
         "children": [],
@@ -249,14 +282,14 @@
           "fontSize": 30,
           "text": "进阶",
           "hAlignment": 1,
-          "x": 1062.0,
-          "y": 390.0,
+          "x": 989.0,
+          "y": 387.0,
           "visible": true,
           "classType": "Label",
           "width": 60.0,
           "height": 34.0,
-          "positionPercentX": 0.934859157,
-          "positionPercentY": 0.609375,
+          "positionPercentX": 0.8705986,
+          "positionPercentY": 0.6046875,
           "sizePercentX": 0.08010563,
           "sizePercentY": 0.0359375,
           "actionTag": 18172074,

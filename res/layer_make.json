@@ -1,0 +1,256 @@
+{
+  "version": "1.0.0.0",
+  "designWidth": 1136,
+  "designHeight": 640,
+  "dataScale": 1.0,
+  "textures": [],
+  "texturesPng": [
+    "protrait_jiaoyuenvshen.png",
+    "yun5.png",
+    "yun7.png",
+    "sina_cancel_1-hd.png"
+  ],
+  "nodeTree": {
+    "options": {
+      "$type": "EditorCommon.JsonModel.Component.GUI.RootGUISurrogate, EditorCommon",
+      "visible": true,
+      "frameEvent": null,
+      "name": "Node",
+      "classname": "Node"
+    },
+    "children": [
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.PanelSurrogate, EditorCommon",
+          "bgColorR": 130,
+          "bgColorG": 222,
+          "bgColorB": 165,
+          "bgColorOpacity": 255,
+          "touchAble": true,
+          "visible": true,
+          "classType": "Panel",
+          "width": 1136.0,
+          "height": 640.0,
+          "sizePercentX": 14.2,
+          "sizePercentY": 106.666664,
+          "actionTag": 69784507,
+          "tag": 85,
+          "anchorPointX": 0.0,
+          "anchorPointY": 0.0,
+          "name": "Panel_10",
+          "classname": "Panel"
+        },
+        "children": [],
+        "classname": "Panel"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.LabelSurrogate, EditorCommon",
+          "fontSize": 50,
+          "text": "最后的勇士",
+          "hAlignment": 1,
+          "x": 776.0,
+          "y": 495.0,
+          "visible": true,
+          "classType": "Label",
+          "width": 250.0,
+          "height": 57.0,
+          "positionPercentX": 9.7,
+          "positionPercentY": 82.5,
+          "sizePercentX": 1.1375,
+          "sizePercentY": 3.83333325,
+          "actionTag": 931111108,
+          "tag": 79,
+          "ignoreSize": true,
+          "name": "Label_4",
+          "classname": "Label"
+        },
+        "children": [],
+        "classname": "Label"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.ImageViewSurrogate, EditorCommon",
+          "fileNameData": {
+            "resourceType": 0,
+            "path": "protrait_jiaoyuenvshen.png",
+            "plistFile": ""
+          },
+          "scale9Width": 500.0,
+          "scale9Height": 772.0,
+          "x": 279.0,
+          "y": 318.0,
+          "scaleX": 0.751586735,
+          "scaleY": 0.820827544,
+          "visible": true,
+          "classType": "ImageView",
+          "width": 500.0,
+          "height": 772.0,
+          "positionPercentX": 3.4875,
+          "positionPercentY": 53.0,
+          "sizePercentX": 1.0,
+          "sizePercentY": 13.333333,
+          "actionTag": 138667019,
+          "tag": 80,
+          "ignoreSize": true,
+          "name": "ImageView_5_0",
+          "classname": "ImageView"
+        },
+        "children": [],
+        "classname": "ImageView"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.ImageViewSurrogate, EditorCommon",
+          "fileNameData": {
+            "resourceType": 0,
+            "path": "yun5.png",
+            "plistFile": ""
+          },
+          "scale9Width": 457.0,
+          "scale9Height": 199.0,
+          "x": 806.0,
+          "y": 297.0,
+          "visible": true,
+          "classType": "ImageView",
+          "width": 457.0,
+          "height": 199.0,
+          "positionPercentX": 10.075,
+          "positionPercentY": 49.5,
+          "sizePercentX": 1.0,
+          "sizePercentY": 13.333333,
+          "actionTag": 390291705,
+          "tag": 81,
+          "ignoreSize": true,
+          "name": "ImageView_6",
+          "classname": "ImageView"
+        },
+        "children": [],
+        "classname": "ImageView"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.LabelSurrogate, EditorCommon",
+          "fontSize": 50,
+          "text": "制作：潘思浩",
+          "x": 818.0,
+          "y": 302.0,
+          "visible": true,
+          "classType": "Label",
+          "width": 300.0,
+          "height": 57.0,
+          "positionPercentX": 10.225,
+          "positionPercentY": 50.3333321,
+          "sizePercentX": 1.1375,
+          "sizePercentY": 3.83333325,
+          "actionTag": 103539645,
+          "tag": 137,
+          "ignoreSize": true,
+          "name": "Label_13",
+          "classname": "Label"
+        },
+        "children": [],
+        "classname": "Label"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.ImageViewSurrogate, EditorCommon",
+          "fileNameData": {
+            "resourceType": 0,
+            "path": "yun7.png",
+            "plistFile": ""
+          },
+          "scale9Width": 178.0,
+          "scale9Height": 148.0,
+          "x": 517.0,
+          "y": 99.0,
+          "flipX": true,
+          "visible": true,
+          "classType": "ImageView",
+          "width": 178.0,
+          "height": 148.0,
+          "positionPercentX": 6.4625,
+          "positionPercentY": 16.5,
+          "sizePercentX": 1.0,
+          "sizePercentY": 13.333333,
+          "actionTag": 287988874,
+          "tag": 82,
+          "ignoreSize": true,
+          "name": "ImageView_7",
+          "classname": "ImageView"
+        },
+        "children": [],
+        "classname": "ImageView"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.ButtonSurrogate, EditorCommon",
+          "normalData": {
+            "resourceType": 0,
+            "path": "sina_cancel_1-hd.png",
+            "plistFile": ""
+          },
+          "pressedData": {
+            "resourceType": 0,
+            "path": "sina_cancel_1-hd.png",
+            "plistFile": ""
+          },
+          "disabledData": {
+            "resourceType": 0
+          },
+          "text": "",
+          "capInsetsWidth": 1.0,
+          "capInsetsHeight": 1.0,
+          "scale9Width": 176.0,
+          "scale9Height": 54.0,
+          "x": 102.0,
+          "y": 600.0,
+          "touchAble": true,
+          "visible": true,
+          "classType": "Button",
+          "width": 176.0,
+          "height": 54.0,
+          "positionPercentX": 1.275,
+          "positionPercentY": 100.0,
+          "sizePercentX": 1.2875,
+          "sizePercentY": 6.66666651,
+          "actionTag": 902107675,
+          "tag": 166,
+          "ignoreSize": true,
+          "name": "btn_back",
+          "classname": "Button"
+        },
+        "children": [],
+        "classname": "Button"
+      },
+      {
+        "options": {
+          "$type": "EditorCommon.JsonModel.Component.GUI.LabelSurrogate, EditorCommon",
+          "text": "东北大学@2015 毕业设计",
+          "x": 558.0,
+          "y": 108.0,
+          "visible": true,
+          "classType": "Label",
+          "width": 230.0,
+          "height": 23.0,
+          "positionPercentX": 6.975,
+          "positionPercentY": 18.0,
+          "sizePercentX": 1.1375,
+          "sizePercentY": 3.83333325,
+          "actionTag": 761020917,
+          "tag": 138,
+          "ignoreSize": true,
+          "name": "Label_14",
+          "classname": "Label"
+        },
+        "children": [],
+        "classname": "Label"
+      }
+    ],
+    "classname": "Node"
+  },
+  "action": {
+    "speed": 1.0,
+    "timelines": []
+  }
+}

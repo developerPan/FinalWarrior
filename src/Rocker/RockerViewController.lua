@@ -48,7 +48,7 @@ function RockerViewController:startRocker()
             local x = 60*1.7*(posX-m1)/math.sqrt(math.pow((posX-m1),2)+math.pow((posY-m2),2))+m1
             local y = m2 - (x-m1)*(m2-posY)/(posX-m1)  
             self.view.dot:setPosition(x,y)
-            
+          
         end
     end
     local function onTouchBegan(sender,eventType)

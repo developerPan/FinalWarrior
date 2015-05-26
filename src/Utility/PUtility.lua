@@ -9,9 +9,9 @@ function PUtility:bindButton(btn,func)
             btn:setScale(baseScale)
             elseif(eventType == ccui.TouchEventType.moved)then
             
-            elseif(eventType-1 == ccui.TouchEventType.ended-1)then
+            elseif(eventType == ccui.TouchEventType.ended)then
                 func()
-            btn:setScale(baseScale)
+                btn:setScale(baseScale)
             else
                 
             end

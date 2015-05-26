@@ -12,7 +12,7 @@ function Application:run()
     self:initGlobalVar()
     --create scene 
     local sceneName = "Main"
-    --sceneName = "Welcome"
+    sceneName = "Welcome"
     --local scene = require("CG")
     GSceneMgr:changeScene(sceneName)
 end

@@ -11,7 +11,7 @@ local PUIHelper =   require("Utility/PUIHelper")
 local KeyboardController    =   require("Modules/Keyboard/KeyboardController")
 local TransitionController  =   require("Modules/Transition/TransitionController")
 function MainController.create(view,menuView)
-    
+   
     local inst  =   MainController.new()
     inst.view = view
     inst.menuView = menuView
